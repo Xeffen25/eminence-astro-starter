@@ -4,6 +4,7 @@
 .gitignore
 .idx/dev.nix
 public/.assetsignore
+LICENSE
 **/*.gitkeep
 **/*.png
 **/*.jpg
