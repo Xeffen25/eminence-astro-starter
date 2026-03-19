@@ -30,3 +30,6 @@ jobs:
 
             - name: Format check
               run: pnpm format:check
+
+            - name: Astro check
+              run: pnpm astro check
