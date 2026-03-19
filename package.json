@@ -12,13 +12,26 @@
 		"astro": "astro",
 		"generate-types": "wrangler types",
 		"deploy": "astro build && wrangler deploy",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"format:check": "prettier . --check",
+		"format:fix": "prettier . --write",
+		"check": "pnpm format:check",
+		"fix": "pnpm format:fix",
+		"all": "pnpm format:fix && pnpm cf-typegen && pnpm build",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*": "prettier --write"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^13.1.2",
 		"astro": "^6.0.7"
 	},
 	"devDependencies": {
+		"husky": "^9.1.7",
+		"lint-staged": "^16.4.0",
+		"prettier": "^3.8.1",
+		"prettier-plugin-astro": "^0.14.1",
 		"wrangler": "^4.75.0"
 	}
 }
