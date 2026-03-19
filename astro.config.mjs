@@ -7,4 +7,5 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
 	site: "https://eminence-astro-starter.xeffen25.com",
 	adapter: cloudflare(),
+	output: "server",
 });
