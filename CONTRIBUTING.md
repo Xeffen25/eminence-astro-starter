@@ -1,3 +1,5 @@
+# Contribution Policy
+
 To keep the codebase clean and the history searchable, we follow a strict structure for branches, commits, and issues.
 
 ## 🏗 Workflow & Branching
