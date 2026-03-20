@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 
 import cloudflare from "@astrojs/cloudflare";
 
@@ -12,4 +12,19 @@ export default defineConfig({
 	},
 	adapter: cloudflare(),
 	output: "server",
+	env: {
+		schema: {
+			CLOUDFLARE_API_KEY: envField.string({
+				context: "server",
+				access: "secret",
+				optional: false,
+			}),
+			SITE_URL: envField.string({
+				context: "server",
+				access: "public",
+				optional: false,
+				url: true,
+			}),
+		},
+	},
 });

@@ -1,0 +1,9 @@
+# Cloudflare Workers local development variables
+# Copy this file to .dev.vars and fill in the values
+# .dev.vars is used by Wrangler for local development (equivalent to Cloudflare Dashboard secrets)
+
+# Your Cloudflare API key
+CLOUDFLARE_API_KEY=
+
+# The public URL of your site (e.g. https://example.com)
+SITE_URL=

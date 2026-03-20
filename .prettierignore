@@ -19,3 +19,5 @@ LICENSE
 **/*.ttf
 **/*.otf
 **/*.txt
+.env.example
+.dev.vars.example
