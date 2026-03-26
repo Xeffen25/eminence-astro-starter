@@ -5,7 +5,6 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.insertSpaces": false,
-	"prettier.printWidth": 120,
-	"prettier.tabWidth": 4,
-	"prettier.useTabs": true
+	"prettier.configPath": ".prettierrc",
+	"prettier.requireConfig": true
 }
