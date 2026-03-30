@@ -104,6 +104,12 @@
 		"color": "5319e7",
 		"description": "Localization, internationalization, and language support"
 	},
+
+	{
+		"name": "analytics",
+		"color": "e67e22",
+		"description": "User behavior tracking, metrics, and analytics integration"
+	},
 	{
 		"name": "seo",
 		"color": "3d9970",
@@ -113,6 +119,11 @@
 		"name": "lighthouse",
 		"color": "f1c40f",
 		"description": "Core Web Vitals and performance scoring improvements"
+	},
+	{
+		"name": "performance",
+		"color": "f39c12",
+		"description": "Runtime performance improvements and bottleneck fixes"
 	},
 	{
 		"name": "ui",
