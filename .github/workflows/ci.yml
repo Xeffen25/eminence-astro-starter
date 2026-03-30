@@ -33,3 +33,6 @@ jobs:
 
             - name: Astro check
               run: pnpm astro check
+
+            - name: Run tests
+              run: pnpm test
