@@ -6,7 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "eminence-astro-starter",
 	"main": "@astrojs/cloudflare/entrypoints/server",
-	"compatibility_date": "2026-03-19",
+	"compatibility_date": "2026-03-17",
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"assets": {
 		"binding": "ASSETS",
