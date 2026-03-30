@@ -4,11 +4,10 @@
 	"exclude": ["dist"],
 	"compilerOptions": {
 		"types": ["./worker-configuration.d.ts"],
-		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
-			"~/*": ["public/*"]
+			"@/*": ["./src/*"],
+			"~/*": ["./public/*"],
 		},
-		"verbatimModuleSyntax": true
-	}
+		"verbatimModuleSyntax": true,
+	},
 }
