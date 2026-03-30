@@ -15,9 +15,11 @@
 		"cf-typegen": "wrangler types",
 		"format:check": "prettier . --check",
 		"format:fix": "prettier . --write",
-		"check": "pnpm format:check && astro check",
+		"test": "vitest run",
+		"test:watch": "vitest watch",
+		"check": "pnpm format:check && astro check && pnpm test",
 		"fix": "pnpm format:fix",
-		"all": "pnpm format:fix && pnpm cf-typegen && astro check && pnpm build",
+		"all": "pnpm format:fix && pnpm cf-typegen && astro check && pnpm build && pnpm test",
 		"prepare": "husky"
 	},
 	"lint-staged": {
@@ -35,6 +37,7 @@
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-organize-imports": "^4.3.0",
 		"typescript": "^6.0.2",
+		"vitest": "^4.1.2",
 		"wrangler": "^4.78.0"
 	}
 }
