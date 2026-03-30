@@ -24,8 +24,8 @@
 		"*": "prettier --write"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^13.1.2",
-		"astro": "^6.0.7"
+		"@astrojs/cloudflare": "^13.1.5",
+		"astro": "^6.1.2"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.8",
@@ -34,7 +34,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-organize-imports": "^4.3.0",
-		"typescript": "^5.9.3",
-		"wrangler": "^4.75.0"
+		"typescript": "^6.0.2",
+		"wrangler": "^4.78.0"
 	}
 }
