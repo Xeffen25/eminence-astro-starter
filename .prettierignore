@@ -2,6 +2,7 @@
 .prettierignore
 .gitattributes
 .gitignore
+.npmrc
 .idx/dev.nix
 public/.assetsignore
 LICENSE
