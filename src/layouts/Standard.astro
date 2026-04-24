@@ -1,0 +1,25 @@
+---
+import Base from "@/layouts/Base.astro";
+import SkipToContent from "@/components/SkipToContent.astro";
+import type { ComponentProps } from "astro/types";
+
+interface Props extends ComponentProps<typeof Base> {
+	// Add any additional props here if needed
+}
+---
+
+<Base {...Astro.props}>
+	<slot name="head" slot="head" />
+	<slot name="body-start" slot="body-start" />
+	<slot name="body-end" slot="body-end" />
+	<SkipToContent />
+	<header id="header">
+		<slot name="header" />
+	</header>
+	<main id="main" tabindex="-1">
+		<slot />
+	</main>
+	<footer id="footer">
+		<slot name="footer" />
+	</footer>
+</Base>

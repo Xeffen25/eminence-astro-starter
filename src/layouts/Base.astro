@@ -1,0 +1,20 @@
+---
+import { Head } from "eminence-astro-suite/components";
+import type { HeadProps } from "eminence-astro-suite/components";
+
+interface Props extends HeadProps {
+	// Add any additional props here if needed
+}
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+	<Head {...Astro.props}>
+		<slot name="head" />
+	</Head>
+	<body>
+		<slot name="body-start" />
+		<slot />
+		<slot name="body-end" />
+	</body>
+</html>

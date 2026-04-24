@@ -26,18 +26,19 @@
 		"*": "prettier --write"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "^13.1.7",
-		"astro": "^6.1.3"
+		"@astrojs/cloudflare": "^13.2.1",
+		"astro": "^6.1.9",
+		"eminence-astro-suite": "github:Xeffen25/eminence-astro-suite#path:package/"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.8",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.4.0",
-		"prettier": "^3.8.1",
+		"prettier": "^3.8.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-organize-imports": "^4.3.0",
 		"typescript": "^5.9.3",
-		"vitest": "^4.1.2",
-		"wrangler": "^4.80.0"
+		"vitest": "^4.1.5",
+		"wrangler": "^4.85.0"
 	}
 }
