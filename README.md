@@ -62,18 +62,24 @@ pnpm create astro@latest --template Xeffen25/eminence-astro-starter
 
 Follow the prompts to create the new project from this repository template.
 
-### 2. Rename the site
+### 2. Rename the project
 
 Update the project name in these files:
 
-- `package.json`
-- `wrangler.jsonc`
+- `wrangler.jsonc` the `name` and `route` if you have a custom domain or delete the route property and set `workers_dev` to true.
+- `package.json` name
 
-At minimum, change:
+### 3. Delete unnecessary files
 
-- The `name` field in `package.json`
-- The `name` field in `wrangler.jsonc`
-- The `route.pattern` value in `wrangler.jsonc` if you are using a custom domain
+Delete the following files:
+
+- LICENSE
+- CONTRIBUTING.md
+- README.md
+- .github/SUPPORT.md
+- .github/SECURITY.md
+
+I recommend you create an Issue with these as a checklist so you later read them depending on your project needs. If it is open source you should probably add all. If it isn't just a CONTRIBUTING.md and README.md to inform your team.
 
 ### 3. Format the project
 
@@ -91,6 +97,16 @@ After renaming and formatting the project, create your first commit:
 git add .
 git commit -m "Initial commit"
 ```
+
+Publish it to github
+
+### 5. Link to Cloudflare
+
+Link your github repo with Clouflare Workers application so you it deploys.
+
+### 6. Make it yours
+
+Now you can just make it yours. Change the icon.svg, the homepage, use the eminence-astro-suite config which logs warnings when you build your project. See the wiki for more details on the features of this template and how to use them or how to add integrations as Clouflare being an edge environment has some bugs that need workarounds like when using React.
 
 ## Available Commands
 

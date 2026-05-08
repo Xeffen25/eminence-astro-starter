@@ -26,7 +26,6 @@ These instructions apply to all changes in this repository.
 
 Use these commands from the repository root.
 
-- Install deps: pnpm install
 - Generate Cloudflare types (if bindings or worker environment types changed always run this command): pnpm generate-types
 - Run tests: pnpm test when files that affect tests are changed.
 
