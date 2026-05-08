@@ -6,12 +6,12 @@ interface Props extends HeadProps {}
 
 <!doctype html>
 <html lang={Astro.currentLocale}>
-	<Head {...Astro.props}>
-		<slot name="head" />
-	</Head>
-	<body>
-		<slot name="body-start" />
-		<slot />
-		<slot name="body-end" />
-	</body>
+  <Head {...Astro.props}>
+    <slot name="head" />
+  </Head>
+  <body>
+    <slot name="body-start" />
+    <slot />
+    <slot name="body-end" />
+  </body>
 </html>

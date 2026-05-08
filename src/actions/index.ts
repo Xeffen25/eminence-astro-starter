@@ -2,5 +2,5 @@
 // import { z } from 'astro:schema';
 
 export const server = {
-	// exampleAction: defineAction({ /* ... */ })
+  // exampleAction: defineAction({ /* ... */ })
 };

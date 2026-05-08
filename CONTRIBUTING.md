@@ -55,6 +55,6 @@ While your `branch` and `commit` must stick to a single `type` for traceability,
 2. Create a branch: Follow the `issue-number-type/brief-description` convention.
 3. Commit your changes: Use the conventional commit `type`s.
 4. Push & Pull Request:
-    - Push to your fork.
-    - Open a PR against the `main` branch.
-    - Clearly describe the changes and link the issue (e.g., `Closes #12`).
+   - Push to your fork.
+   - Open a PR against the `main` branch.
+   - Clearly describe the changes and link the issue (e.g., `Closes #12`).

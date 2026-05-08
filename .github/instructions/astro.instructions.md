@@ -15,14 +15,14 @@ Every Astro component has two parts: **frontmatter** (server-side code) and **te
 import SomeComponent from "./SomeComponent.astro";
 const { title } = Astro.props;
 interface Props {
-	title: string;
+  title: string;
 }
 ---
 
 <!-- Template: HTML + JS expressions -->
 <div>
-	<h1>{title}</h1>
-	<SomeComponent />
+  <h1>{title}</h1>
+  <SomeComponent />
 </div>
 ```
 
@@ -45,22 +45,22 @@ Use layouts for shared structure (header, footer, nav). Use components for widge
 
 - **By default**: Astro strips all client-side JavaScript. Components render to static HTML.
 - **Interactive components**: Import UI framework components (React, Vue) and add a `client:*` directive:
-    ```astro
-    import MyReactButton from "./MyReactButton.jsx"
-    <MyReactButton client:load />
-    <!-- Hydrates on page load -->
-    <MyReactButton client:idle />
-    <!-- Hydrates when browser
-    is idle -->
-    <MyReactButton client:visible />
-    <!-- Hydrates when visible in viewport -->
-    ```
+  ```astro
+  import MyReactButton from "./MyReactButton.jsx"
+  <MyReactButton client:load />
+  <!-- Hydrates on page load -->
+  <MyReactButton client:idle />
+  <!-- Hydrates when browser
+  is idle -->
+  <MyReactButton client:visible />
+  <!-- Hydrates when visible in viewport -->
+  ```
 - **Server islands**: For personalized server-rendered content, use `server:defer`:
-    ```astro
-    import UserProfile from "./UserProfile.astro"
-    <UserProfile server:defer />
-    <!-- Renders in parallel, non-blocking -->
-    ```
+  ```astro
+  import UserProfile from "./UserProfile.astro"
+  <UserProfile server:defer />
+  <!-- Renders in parallel, non-blocking -->
+  ```
 
 **When to hydrate:**
 
@@ -71,31 +71,31 @@ Use layouts for shared structure (header, footer, nav). Use components for widge
 ## Styling
 
 - **Scoped CSS**: Use `<style>` tags for component-scoped styles. CSS is automatically scoped to that component only.
-    ```astro
-    <style>
-    	.card {
-    		border: 1px solid #ccc;
-    	}
-    </style>
-    <div class="card">...</div>
-    ```
+  ```astro
+  <style>
+    .card {
+      border: 1px solid #ccc;
+    }
+  </style>
+  <div class="card">...</div>
+  ```
 - **Global CSS**: Import in layouts or pages:
-    ```astro
-    import "../styles/global.css";
-    ```
+  ```astro
+  import "../styles/global.css";
+  ```
 - **CSS variables with JS values**: Use `define:vars`:
 
-    ```astro
-    ---
-    const primaryColor = "#ff0000";
-    ---
+  ```astro
+  ---
+  const primaryColor = "#ff0000";
+  ---
 
-    <style define:vars={{ primaryColor }}>
-    	.button {
-    		color: var(--primaryColor);
-    	}
-    </style>
-    ```
+  <style define:vars={{ primaryColor }}>
+    .button {
+      color: var(--primaryColor);
+    }
+  </style>
+  ```
 
 ## Props & Slots
 
@@ -103,17 +103,17 @@ Use layouts for shared structure (header, footer, nav). Use components for widge
 ---
 // Props must be destructured from Astro.props
 interface Props {
-	title: string;
-	description?: string;
+  title: string;
+  description?: string;
 }
 const { title, description } = Astro.props;
 ---
 
 <div>
-	<h1>{title}</h1>
-	{description && <p>{description}</p>}
-	<!-- <slot> for child content -->
-	<slot />
+  <h1>{title}</h1>
+  {description && <p>{description}</p>}
+  <!-- <slot> for child content -->
+  <slot />
 </div>
 ```
 
@@ -132,12 +132,12 @@ const { title, description } = Astro.props;
 ```astro
 ---
 interface Props {
-	items: string[];
-	count: number;
+  items: string[];
+  count: number;
 }
 
 function getItemLabel(item: string): string {
-	return item.toUpperCase();
+  return item.toUpperCase();
 }
 
 const { items, count } = Astro.props;
@@ -153,11 +153,11 @@ For Markdown/MDX pages, define a schema in `src/content/config.ts`:
 import { defineCollection, z } from "astro:content";
 
 const blog = defineCollection({
-	schema: z.object({
-		title: z.string(),
-		date: z.date(),
-		tags: z.array(z.string()).optional(),
-	}),
+  schema: z.object({
+    title: z.string(),
+    date: z.date(),
+    tags: z.array(z.string()).optional(),
+  }),
 });
 
 export const collections = { blog };
