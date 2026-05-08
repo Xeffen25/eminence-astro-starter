@@ -1,43 +1,107 @@
-# Astro Starter Kit: Minimal
+# Eminence Astro Starter
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+The best starter template for Astro projects deployed to Cloudflare Workers because it ships with a full site structure, Cloudflare-ready configuration, and a setup flow tuned for fast project launches.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Improvements
 
-## 🚀 Project Structure
+The template includes:
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Full Project Structure](https://github.com/Xeffen25/eminence-astro-starter/wiki/Full-Project-Structure)
+- [Automatic Formatting](https://github.com/Xeffen25/eminence-astro-starter/wiki/Formatting)
+- [Layout Ready](https://github.com/Xeffen25/eminence-astro-starter/wiki/Layout-Ready)
+- [SEO Ready with eminence-astro-suite](https://github.com/Xeffen25/eminence-astro-starter/wiki/SEO-Ready)
+- [pnpm config improvements](https://github.com/Xeffen25/eminence-astro-starter/wiki/PNPM-Config-Improvements)
+- [TypeScript Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/TypeScript-Config)
+- [Wrangler Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/Wrangler-Configured)
+- [Better commands for easier DX](https://github.com/Xeffen25/eminence-astro-starter/wiki/Better-Commands)
+- [AI ready](https://github.com/Xeffen25/eminence-astro-starter/wiki/AI-Ready)
+- [GitHub labels for websites](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Labels)
+- [GitHub related files](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Related-Files)
+- [VS Code settings](https://github.com/Xeffen25/eminence-astro-starter/wiki/VS-Code-Settings)
+
+## Project Structure
 
 ```text
 /
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+├── astro.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
 ├── public/
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── actions/
+│   ├── assets/
+│   ├── components/
+│   ├── content/
+│   ├── fonts/
+│   ├── forms/
+│   ├── layouts/
+│   ├── lib/
+│   ├── pages/
+│   ├── styles/
+│   ├── tests/
+│   ├── types/
+│   └── env.d.ts
+├── tsconfig.json
+├── worker-configuration.d.ts
+└── wrangler.jsonc
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### 1. Use the template
 
-Any static assets, like images, can be placed in the `public/` directory.
+Create your project from this template with:
 
-## 🧞 Commands
+```sh
+pnpm create astro@latest --template Xeffen25/eminence-astro-starter
+```
 
-All commands are run from the root of the project, from a terminal:
+Follow the prompts to create the new project from this repository template.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+### 2. Rename the site
 
-## 👀 Want to learn more?
+Update the project name in these files:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `package.json`
+- `wrangler.jsonc`
+
+At minimum, change:
+
+- The `name` field in `package.json`
+- The `name` field in `wrangler.jsonc`
+- The `route.pattern` value in `wrangler.jsonc` if you are using a custom domain
+
+### 3. Format the project
+
+Run:
+
+```sh
+pnpm format
+```
+
+### 4. Create your initial commit
+
+After renaming and formatting the project, create your first commit:
+
+```sh
+git add .
+git commit -m "Initial commit"
+```
+
+## Available Commands
+
+All commands are run from the project root.
+
+| Command               | Action                                       |
+| :-------------------- | :------------------------------------------- |
+| `pnpm dev`            | Start the Astro dev server                   |
+| `pnpm build`          | Build the site                               |
+| `pnpm preview`        | Preview the production build locally         |
+| `pnpm generate-types` | Generate Wrangler types                      |
+| `pnpm format`         | Format the codebase with Prettier            |
+| `pnpm test`           | Run tests                                    |
+| `pnpm ci`             | Run formatting check, Astro check, and tests |
