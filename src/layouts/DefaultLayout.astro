@@ -1,6 +1,7 @@
 ---
 import type { ComponentProps } from "astro/types";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import SkipToContent from "@/components/SkipToContent.astro";
 
 interface Props extends ComponentProps<typeof BaseLayout> {}
 ---
@@ -9,7 +10,7 @@ interface Props extends ComponentProps<typeof BaseLayout> {}
 	<slot name="head" slot="head" />
 	<slot name="body-start" slot="body-start" />
 	<slot name="body-end" slot="body-end" />
-
+	<SkipToContent />
 	<header id="header"></header>
 	<main id="main" tabindex="-1">
 		<slot />

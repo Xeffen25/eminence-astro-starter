@@ -10,6 +10,10 @@ export default defineConfig({
 	site: "https://eminence-astro-starter.xeffen25.com",
 	adapter: cloudflare(),
 	output: "server",
+	i18n: {
+		defaultLocale: "es",
+		locales: ["es"],
+	},
 	integrations: [
 		eminencesuite({
 			icons: {
