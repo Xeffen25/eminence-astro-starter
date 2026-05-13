@@ -17,7 +17,7 @@
     "format:check": "prettier . --check",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "ci": "pnpm format:check && astro check && pnpm test",
+    "github:ci": "pnpm format:check && astro check && pnpm test",
     "all": "pnpm format && pnpm cf-typegen && astro check && pnpm test && pnpm build",
     "prepare": "husky"
   },
