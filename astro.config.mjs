@@ -5,6 +5,8 @@ import cloudflare from "@astrojs/cloudflare";
 import tailwindcss from "@tailwindcss/vite";
 import eminencesuite from "eminence-astro-suite";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://eminence-astro-starter.xeffen25.com",
@@ -22,6 +24,7 @@ export default defineConfig({
         source: "src/assets/icon.svg",
       },
     }),
+    svelte(),
   ],
 
   vite: {
