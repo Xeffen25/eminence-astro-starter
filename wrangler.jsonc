@@ -7,7 +7,7 @@
   "name": "eminence-astro-starter",
   "main": "@astrojs/cloudflare/entrypoints/server",
   "compatibility_date": "2026-03-17",
-  "compatibility_flags": ["global_fetch_strictly_public"],
+  "compatibility_flags": ["global_fetch_strictly_public", "nodejs_compat"],
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist",
