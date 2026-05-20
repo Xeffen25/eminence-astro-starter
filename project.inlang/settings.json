@@ -8,5 +8,7 @@
   ],
   "plugin.inlang.messageFormat": {
     "pathPattern": "./messages/{locale}.json"
-  }
+  },
+  "emitGitIgnore": false,
+  "emitPrettierIgnore": false
 }
