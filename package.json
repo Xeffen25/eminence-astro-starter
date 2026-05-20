@@ -33,7 +33,7 @@
     "@astrojs/svelte": "^8.1.1",
     "@tailwindcss/vite": "^4.3.0",
     "astro": "^6.3.5",
-    "eminence-astro-suite": "1.0.0-beta.3",
+    "eminence-astro-suite": "1.0.0-beta.4",
     "sharp": "^0.34.5",
     "sharp-ico": "^0.1.5",
     "svelte": "^5.55.8",
