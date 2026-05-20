@@ -3,9 +3,6 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
 import { m } from "@/paraglide/messages";
 ---
 
-<DefaultLayout
-  title="Eminence Astro Starter"
-  description="A modern Astro starter template with quality-of-life features to jumpstart your next web project, deployed on Cloudflare"
->
-  <h1>{m.example_message()}</h1>
+<DefaultLayout title={m.index_title()} description={m.index_description()}>
+  <h1>{m.index_h1()}</h1>
 </DefaultLayout>
