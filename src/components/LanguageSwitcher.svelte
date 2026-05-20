@@ -14,8 +14,10 @@
     en: { label: "English", flag: gbFlagSvg },
   };
 
+  export let path = "/";
+
   const currentLocale = getLocale();
-  const basePath = deLocalizeHref("/");
+  const basePath = deLocalizeHref(path);
 
   const languages = locales.map((locale) => {
     const meta = languageMeta[locale];
