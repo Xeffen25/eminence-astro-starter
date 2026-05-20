@@ -1,4 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "Hola mundo"
+  "index_title": "Eminence Astro Starter",
+  "index_description": "Una plantilla moderna de Astro con características de calidad de vida para acelerar tu próximo proyecto web, desplegada en Cloudflare.",
+  "index_h1": "Bienvenido a Eminence Astro Starter"
 }
