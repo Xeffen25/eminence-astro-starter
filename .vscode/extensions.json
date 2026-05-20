@@ -2,7 +2,8 @@
   "recommendations": [
     "astro-build.astro-vscode",
     "esbenp.prettier-vscode",
-    "vitest.explorer"
+    "vitest.explorer",
+    "inlang.vs-code-extension"
   ],
   "unwantedRecommendations": []
 }

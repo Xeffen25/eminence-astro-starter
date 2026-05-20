@@ -6,12 +6,12 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "wrangler types && astro dev",
-    "build": "astro build",
-    "preview": "astro build && astro preview",
+    "dev": "wrangler types && concurrently \"pnpm paraglide:watch\" \"astro dev\"",
+    "build": "pnpm paraglide && astro build",
+    "preview": "pnpm build && astro preview",
     "astro": "astro",
     "generate-types": "wrangler types",
-    "deploy": "astro build && wrangler deploy",
+    "deploy": "pnpm build && wrangler deploy",
     "cf-typegen": "wrangler types",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
@@ -19,7 +19,10 @@
     "test:watch": "vitest watch",
     "github:ci": "pnpm format:check && astro check && pnpm test",
     "all": "pnpm format && pnpm cf-typegen && astro check && pnpm test && pnpm build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src\\paraglide",
+    "paraglide:watch": "pnpm paraglide --watch",
+    "machine-translate": "inlang machine translate --project project.inlang"
   },
   "lint-staged": {
     "*": "prettier --write"
@@ -38,11 +41,16 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
+    "@inlang/cli": "^3.0.0",
+    "@inlang/paraglide-js": "^2.18.0",
+    "@types/node": "^24.12.2",
+    "concurrently": "^9.2.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.3",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-svelte": "^3.5.2",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5",
     "wrangler": "^4.90.0"

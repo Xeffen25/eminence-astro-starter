@@ -1,5 +1,9 @@
 {
-  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-astro"],
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-astro",
+    "prettier-plugin-svelte"
+  ],
   "overrides": [
     {
       "files": "*.astro",
@@ -11,6 +15,12 @@
       "files": "*.svg",
       "options": {
         "parser": "html"
+      }
+    },
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
       }
     }
   ]

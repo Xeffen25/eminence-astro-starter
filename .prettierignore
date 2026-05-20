@@ -6,6 +6,7 @@
 .idx/dev.nix
 public/.assetsignore
 LICENSE
+src/paraglide/
 **/*.gitkeep
 **/*.png
 **/*.jpg
