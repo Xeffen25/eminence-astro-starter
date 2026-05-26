@@ -6,8 +6,8 @@
 .idx/dev.nix
 public/.assetsignore
 LICENSE
-src/paraglide/
-project.inlang/**
+src/paraglide/*
+project.inlang/*
 !project.inlang/settings.json
 **/*.gitkeep
 **/*.png

@@ -29,6 +29,8 @@ export default defineConfig({
         project: "./project.inlang",
         outdir: "./src/paraglide",
         strategy: ["url", "baseLocale"],
+        emitGitIgnore: false,
+        emitPrettierIgnore: false,
       }),
     ],
   },
