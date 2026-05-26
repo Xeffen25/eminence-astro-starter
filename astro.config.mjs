@@ -17,6 +17,10 @@ export default defineConfig({
     eminencesuite({
       icons: {
         source: "src/assets/icon.svg",
+        "favicon.ico": {
+          sizes: [16, 32, 48],
+          tag: { rel: "icon", sizes: "32x32" },
+        },
       },
     }),
     svelte(),
