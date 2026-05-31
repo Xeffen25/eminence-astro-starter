@@ -4,7 +4,6 @@ import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import svelte from "@astrojs/svelte";
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
-import tailwindcss from "@tailwindcss/vite";
 import eminencesuite from "eminence-astro-suite";
 
 // https://astro.build/config
@@ -24,7 +23,6 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      tailwindcss(),
       paraglideVitePlugin({
         project: "./project.inlang",
         outdir: "./src/paraglide",
