@@ -1,8 +1,9 @@
 ---
 import type { ComponentProps } from "astro/types";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import LanguageSwitcher from "@/components/LanguageSwitcher.svelte";
 import SkipToContent from "@/components/SkipToContent.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
 
 interface Props extends ComponentProps<typeof BaseLayout> {}
 ---
@@ -12,14 +13,9 @@ interface Props extends ComponentProps<typeof BaseLayout> {}
   <slot name="body-start" slot="body-start" />
   <slot name="body-end" slot="body-end" />
   <SkipToContent />
-  <header id="header">
-    <LanguageSwitcher
-      client:load
-      path={`${Astro.url.pathname}${Astro.url.search}`}
-    />
-  </header>
+  <Header />
   <main id="main" tabindex="-1">
     <slot />
   </main>
-  <footer id="footer"></footer>
+  <Footer />
 </BaseLayout>

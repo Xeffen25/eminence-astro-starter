@@ -1,0 +1,10 @@
+---
+import LanguageSwitcher from "@/components/LanguageSwitcher.svelte";
+---
+
+<header id="header">
+  <LanguageSwitcher
+    client:load
+    path={`${Astro.url.pathname}${Astro.url.search}`}
+  />
+</header>
