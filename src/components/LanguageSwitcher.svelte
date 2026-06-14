@@ -78,23 +78,26 @@
   });
 </script>
 
-<nav aria-label="Language switcher" class="language-switcher">
-  <div bind:this={container} class="language-switcher__container">
+<nav aria-label="Language switcher" class="relative inline-flex">
+  <div bind:this={container} class="relative">
     <button
       type="button"
-      class="language-switcher__button"
+      class="inline-flex items-center gap-2 rounded-xl border border-[CanvasText] bg-[Canvas] px-3 py-2 text-sm font-medium leading-5 text-[CanvasText] shadow-[0_1px_2px_0_rgb(15_23_42/0.12)] transition-all duration-150 hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[CanvasText]"
       aria-label={`Current language: ${currentLanguage.label}`}
       aria-expanded={open}
       aria-haspopup="menu"
       on:click={toggleDropdown}
     >
-      <span class="language-switcher__flag" aria-hidden="true">
+      <span
+        class="inline-flex h-3.5 w-5 overflow-hidden rounded-sm"
+        aria-hidden="true"
+      >
         {@html currentLanguage.flag}
       </span>
-      <span class="language-switcher__sr-only">{currentLanguage.label}</span>
+      <span class="sr-only">{currentLanguage.label}</span>
 
       <svg
-        class={`language-switcher__chevron ${open ? "is-open" : ""}`}
+        class={`h-4 w-4 text-[CanvasText] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
         viewBox="0 0 20 20"
         fill="none"
         aria-hidden="true"
@@ -110,16 +113,22 @@
     </button>
 
     {#if open}
-      <div class="language-switcher__menu" role="menu">
+      <div
+        class="absolute left-0 z-20 mt-2 w-56 max-w-[calc(100vw-1rem)] overflow-hidden rounded-2xl border border-[CanvasText] bg-[Canvas] p-2 text-[CanvasText] shadow-[0_20px_25px_-5px_rgb(15_23_42/0.18),0_8px_10px_-6px_rgb(15_23_42/0.14)] backdrop-blur-sm"
+        role="menu"
+      >
         {#each languages as language}
           <a
             href={language.href}
             aria-current={language.isCurrent ? "page" : undefined}
-            class={`language-switcher__item ${language.isCurrent ? "is-current" : ""}`}
+            class={`flex items-center justify-between rounded-xl px-3 py-2 text-sm leading-5 no-underline transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[CanvasText] ${language.isCurrent ? "bg-[CanvasText] text-[Canvas]" : "text-[CanvasText] hover:bg-[CanvasText] hover:text-[Canvas]"}`}
             on:click={(event) => handleLanguageClick(event, language.isCurrent)}
           >
-            <span class="language-switcher__item-content">
-              <span class="language-switcher__flag" aria-hidden="true">
+            <span class="flex items-center gap-2">
+              <span
+                class="inline-flex h-3.5 w-5 overflow-hidden rounded-sm"
+                aria-hidden="true"
+              >
                 {@html language.flag}
               </span>
               <span>{language.label}</span>
@@ -130,140 +139,3 @@
     {/if}
   </div>
 </nav>
-
-<style>
-  .language-switcher {
-    --language-switcher-button-border: #cbd5e1;
-    --language-switcher-button-bg: #f8fafc;
-    --language-switcher-button-text: #0f172a;
-    --language-switcher-button-hover-bg: #f1f5f9;
-    --language-switcher-button-focus-ring: #94a3b8;
-    --language-switcher-button-shadow: 0 1px 2px 0 rgb(15 23 42 / 12%);
-    --language-switcher-chevron: #64748b;
-
-    --language-switcher-menu-border: #e2e8f0;
-    --language-switcher-menu-bg: rgb(255 255 255 / 95%);
-    --language-switcher-menu-shadow:
-      0 20px 25px -5px rgb(15 23 42 / 18%), 0 8px 10px -6px rgb(15 23 42 / 14%);
-
-    --language-switcher-item-current-bg: #0f172a;
-    --language-switcher-item-current-text: #ffffff;
-    --language-switcher-item-default-text: #334155;
-    --language-switcher-item-hover-bg: #f1f5f9;
-    --language-switcher-item-hover-text: #0f172a;
-
-    position: relative;
-    display: inline-flex;
-  }
-
-  .language-switcher__container {
-    position: relative;
-  }
-
-  .language-switcher__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--language-switcher-button-border);
-    border-radius: 0.75rem;
-    background: var(--language-switcher-button-bg);
-    color: var(--language-switcher-button-text);
-    font-size: 0.875rem;
-    font-weight: 500;
-    line-height: 1.25rem;
-    box-shadow: var(--language-switcher-button-shadow);
-    transition:
-      background-color 150ms ease,
-      box-shadow 150ms ease;
-  }
-
-  .language-switcher__button:hover {
-    background: var(--language-switcher-button-hover-bg);
-  }
-
-  .language-switcher__button:focus-visible {
-    outline: none;
-    box-shadow:
-      0 0 0 2px var(--language-switcher-button-focus-ring),
-      var(--language-switcher-button-shadow);
-  }
-
-  .language-switcher__flag {
-    display: inline-flex;
-    width: 1.25rem;
-    height: 0.875rem;
-    overflow: hidden;
-    border-radius: 0.125rem;
-  }
-
-  .language-switcher__sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .language-switcher__chevron {
-    width: 1rem;
-    height: 1rem;
-    color: var(--language-switcher-chevron);
-    transition: transform 200ms ease;
-  }
-
-  .language-switcher__chevron.is-open {
-    transform: rotate(180deg);
-  }
-
-  .language-switcher__menu {
-    position: absolute;
-    left: 0;
-    z-index: 20;
-    width: 14rem;
-    max-width: calc(100vw - 1rem);
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    overflow: hidden;
-    border: 1px solid var(--language-switcher-menu-border);
-    border-radius: 1rem;
-    background: var(--language-switcher-menu-bg);
-    box-shadow: var(--language-switcher-menu-shadow);
-    backdrop-filter: blur(8px);
-  }
-
-  .language-switcher__item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.75rem;
-    color: var(--language-switcher-item-default-text);
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-decoration: none;
-    transition:
-      background-color 150ms ease,
-      color 150ms ease;
-  }
-
-  .language-switcher__item:hover {
-    background: var(--language-switcher-item-hover-bg);
-    color: var(--language-switcher-item-hover-text);
-  }
-
-  .language-switcher__item.is-current {
-    background: var(--language-switcher-item-current-bg);
-    color: var(--language-switcher-item-current-text);
-  }
-
-  .language-switcher__item-content {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-</style>

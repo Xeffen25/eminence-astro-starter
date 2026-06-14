@@ -1,9 +1,11 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
+
 import cloudflare from "@astrojs/cloudflare";
 import svelte from "@astrojs/svelte";
-import { paraglideVitePlugin } from "@inlang/paraglide-js";
+import tailwindcss from "@tailwindcss/vite";
 import eminencesuite from "eminence-astro-suite";
 
 // https://astro.build/config
@@ -30,6 +32,7 @@ export default defineConfig({
         emitGitIgnore: false,
         emitPrettierIgnore: false,
       }),
+      tailwindcss(),
     ],
   },
 });
