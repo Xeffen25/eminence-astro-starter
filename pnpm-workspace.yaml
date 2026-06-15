@@ -7,3 +7,4 @@ allowBuilds:
 ignoreScripts: true
 minimumReleaseAgeExclude:
   - eminence-astro-suite@1.0.0-beta.10
+  - prettier-plugin-svelte@4.1.1
