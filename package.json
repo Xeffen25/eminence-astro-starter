@@ -51,6 +51,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-svelte": "^3.5.2",
+    "schema-dts": "^2.0.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8",
     "wrangler": "^4.100.0"

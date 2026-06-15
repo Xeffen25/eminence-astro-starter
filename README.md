@@ -9,24 +9,25 @@ The best starter template for Astro projects deployed to Cloudflare Workers beca
 The template includes:
 
 - [Full Project Structure](https://github.com/Xeffen25/eminence-astro-starter/wiki/Full-Project-Structure)
-- [Cloudflare Workers build status badge](https://cloudflare-workers-build-badge.xeffen25.com/Xeffen25/eminence-astro-starter/main/status.svg)
-- [Automatic Formatting](https://github.com/Xeffen25/eminence-astro-starter/wiki/Formatting)
-- [Paraglide i18n support (messages + generated runtime)](https://github.com/Xeffen25/eminence-astro-starter/wiki)
-- [Tailwind CSS 4 + daisyUI plugin](https://github.com/Xeffen25/eminence-astro-starter/wiki)
-- [Svelte integration ready for interactive islands](https://github.com/Xeffen25/eminence-astro-starter/wiki)
-- [LanguageSwitcher component included](https://github.com/Xeffen25/eminence-astro-starter/wiki)
-- [Fonts component included](https://github.com/Xeffen25/eminence-astro-starter/wiki)
-- [SkipToContent component included](https://github.com/Xeffen25/eminence-astro-starter/wiki)
+- [Cloudflare Workers build status badge](https://github.com/Xeffen25/eminence-astro-starter/wiki/Cloudflare-Workers-Build-Status-Badge)
+- [Automatic Formatting](https://github.com/Xeffen25/eminence-astro-starter/wiki/Automatic-Formatting)
+- [Paraglide i18n support (messages + generated runtime)](https://github.com/Xeffen25/eminence-astro-starter/wiki/Paraglide-i18n-Support)
+- [Tailwind CSS 4 + daisyUI plugin](https://github.com/Xeffen25/eminence-astro-starter/wiki/Tailwind-CSS-4-and-daisyUI)
+- [Svelte integration ready for interactive islands](https://github.com/Xeffen25/eminence-astro-starter/wiki/Svelte-Integration)
+- [LanguageSwitcher component included](https://github.com/Xeffen25/eminence-astro-starter/wiki/Components-LanguageSwitcher-Fonts-SkipToContent)
+- [Fonts component included](https://github.com/Xeffen25/eminence-astro-starter/wiki/Components-LanguageSwitcher-Fonts-SkipToContent)
+- [SkipToContent component included](https://github.com/Xeffen25/eminence-astro-starter/wiki/Components-LanguageSwitcher-Fonts-SkipToContent)
 - [Layout Ready](https://github.com/Xeffen25/eminence-astro-starter/wiki/Layout-Ready)
-- [SEO Ready with eminence-astro-suite](https://github.com/Xeffen25/eminence-astro-starter/wiki/SEO-Ready)
+- [SEO Ready with eminence-astro-suite](https://github.com/Xeffen25/eminence-astro-starter/wiki/SEO-Ready-with-eminence-astro-suite)
 - [pnpm config improvements](https://github.com/Xeffen25/eminence-astro-starter/wiki/PNPM-Config-Improvements)
 - [TypeScript Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/TypeScript-Config)
-- [Wrangler Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/Wrangler-Configured)
+- [Wrangler Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/Wrangler-Config)
 - [Better commands for easier DX](https://github.com/Xeffen25/eminence-astro-starter/wiki/Better-Commands)
 - [AI ready](https://github.com/Xeffen25/eminence-astro-starter/wiki/AI-Ready)
-- [GitHub labels for websites](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Labels)
+- [GitHub labels for websites](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Labels-for-Websites)
 - [GitHub related files](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Related-Files)
 - [VS Code settings](https://github.com/Xeffen25/eminence-astro-starter/wiki/VS-Code-Settings)
+- [Vitest for testing](https://github.com/Xeffen25/eminence-astro-starter/wiki/Vitest-for-Testing)
 
 ## Project Structure
 
@@ -153,6 +154,7 @@ Recommended checklist:
 
 - [ ] Replace branding assets mainly src/assets/icon.svg
 - [ ] Update pages in general like homepage with their related metadata
+- [ ] Update GitHub repository metadata (description, topics, website, and social preview image)
 - [ ] Use `pnpm build` so see eminence-astro-suite warnings and address them for your project.
 
 ## Available Commands
