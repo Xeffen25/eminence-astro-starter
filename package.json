@@ -19,7 +19,7 @@
     "test:watch": "vitest watch",
     "github:ci": "pnpm format:check && astro check && pnpm test",
     "all": "pnpm format && pnpm cf-typegen && astro check && pnpm test && pnpm build",
-    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src\\paraglide",
+    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
     "paraglide:watch": "pnpm paraglide --watch",
     "machine-translate": "inlang machine translate --project project.inlang"
   },
