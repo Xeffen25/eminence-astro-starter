@@ -6,4 +6,4 @@ allowBuilds:
   workerd: true
 ignoreScripts: true
 minimumReleaseAgeExclude:
-  - eminence-astro-suite@1.0.0-beta.8
+  - eminence-astro-suite@1.0.0-beta.9
