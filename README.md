@@ -94,6 +94,11 @@ Create your project from this template with:
 
 ```sh
 pnpm create astro@latest --template Xeffen25/eminence-astro-starter --install --no-git
+```
+
+Move your terminal into the created directory and start it with the following command:
+
+```sh
 git init
 pnpm husky
 git add .
