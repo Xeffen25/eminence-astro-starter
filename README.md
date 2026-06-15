@@ -93,7 +93,7 @@ The template includes:
 Create your project from this template with:
 
 ```sh
-pnpm create astro@latest --template Xeffen25/eminence-astro-starter --install
+pnpm create astro@latest --template Xeffen25/eminence-astro-starter --install --no-git
 git init
 pnpm husky
 git add .
