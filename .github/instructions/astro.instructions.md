@@ -195,4 +195,4 @@ const filtered = posts.filter((p) => p.data.tags?.includes("astro"));
 
 ## Deployment Target: Cloudflare
 
-This project deploys to Cloudflare Pages. Consult `wrangler.jsonc` and `worker-configuration.d.ts` for available bindings (KV, Durable Objects, etc.). Use `astro build && wrangler deploy` to build and deploy.
+This project deploys to Cloudflare Workers. Consult `wrangler.jsonc` and `worker-configuration.d.ts` for available bindings (KV, Durable Objects, etc.).
