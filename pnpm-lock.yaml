@@ -23,8 +23,8 @@ importers:
         specifier: ^6.4.6
         version: 6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0)
       eminence-astro-suite:
-        specifier: 1.0.0-beta.7
-        version: 1.0.0-beta.7(@astrojs/sitemap@3.7.3)(astro@6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0))(schema-dts@2.0.0(typescript@6.0.3))(sharp-ico@0.1.5)(sharp@0.34.5)
+        specifier: 1.0.0-beta.8
+        version: 1.0.0-beta.8(@astrojs/sitemap@3.7.3)(astro@6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0))(schema-dts@2.0.0(typescript@6.0.3))(sharp-ico@0.1.5)(sharp@0.34.5)
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
@@ -2325,10 +2325,10 @@ packages:
       }
     engines: { node: ">=4" }
 
-  eminence-astro-suite@1.0.0-beta.7:
+  eminence-astro-suite@1.0.0-beta.8:
     resolution:
       {
-        integrity: sha512-GFOBFAgK8AZ6doEfgjHTFQzX3Sn4rQ206jKw4UJ0JuNXZD/NZiP9cWlsNM2A8PgULVKuhuFmodI11WrtinoSwg==,
+        integrity: sha512-TTBTobgocQPdYkRgnvWhjdhjwuhxg7bg4BKLHtDrMxuXqzs/OMDEpom8jknLC1S7zoTohgJY1s66ER4eSQa2zA==,
       }
     peerDependencies:
       "@astrojs/sitemap": ">=3.0.0"
@@ -5970,7 +5970,7 @@ snapshots:
 
   dset@3.1.4: {}
 
-  eminence-astro-suite@1.0.0-beta.7(@astrojs/sitemap@3.7.3)(astro@6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0))(schema-dts@2.0.0(typescript@6.0.3))(sharp-ico@0.1.5)(sharp@0.34.5):
+  eminence-astro-suite@1.0.0-beta.8(@astrojs/sitemap@3.7.3)(astro@6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0))(schema-dts@2.0.0(typescript@6.0.3))(sharp-ico@0.1.5)(sharp@0.34.5):
     dependencies:
       astro: 6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(yaml@2.9.0)
     optionalDependencies:
