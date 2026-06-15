@@ -1,6 +1,6 @@
 # Eminence Astro Starter
 
-![Cloudflare Workers Build Status](https://cloudflare-workers-build-badge.xeffen25.com/Xeffen25/eminence-astro-starter/main/status.svg)
+![Cloudflare Workers Build Status](https://cloudflare-build-badge.xeffen25.com/Xeffen25/eminence-astro-starter/status.svg)
 
 The best starter template for Astro projects deployed to Cloudflare Workers because it ships with a full site structure, Cloudflare-ready configuration, and a setup flow tuned for fast project launches.
 
