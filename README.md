@@ -126,7 +126,7 @@ git push -u origin main
 Update the project name in these files and remove files you do not need:
 
 - `wrangler.jsonc` (`name` and `route` if needed; otherwise delete `route` and set `workers_dev` to `true`)
-- `package.json` (`name`)
+- `astro.config.mjs` (`site`)
 - LICENSE
 - CONTRIBUTING.md
 - README.md
