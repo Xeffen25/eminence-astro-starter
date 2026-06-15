@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 
 import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
@@ -13,6 +13,17 @@ export default defineConfig({
   site: "https://eminence-astro-starter.xeffen25.com",
   adapter: cloudflare(),
   output: "server",
+
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Inter",
+      cssVariable: "--astro-font-inter",
+      // Inter on Google Fonts supports the full range from 100 to 900.
+      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      styles: ["normal", "italic"],
+    },
+  ],
 
   integrations: [
     eminencesuite({

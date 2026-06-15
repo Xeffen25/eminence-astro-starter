@@ -1,6 +1,7 @@
 ---
 import { Head, type HeadProps } from "eminence-astro-suite/components";
 import "@/styles/global.css";
+import Fonts from "@/components/Fonts.astro";
 
 import { getLocale } from "@/paraglide/runtime";
 
@@ -10,6 +11,7 @@ interface Props extends HeadProps {}
 <!doctype html>
 <html lang={getLocale()}>
   <Head {...Astro.props}>
+    <Fonts />
     <slot name="head" />
   </Head>
   <body>
