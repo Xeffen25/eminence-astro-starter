@@ -5,3 +5,5 @@ allowBuilds:
   sharp: true
   workerd: true
 ignoreScripts: true
+minimumReleaseAgeExclude:
+  - eminence-astro-suite@1.0.0-beta.6
