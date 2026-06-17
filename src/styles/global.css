@@ -4,13 +4,7 @@
 }
 
 @theme {
-  --font-inter: var(
-    --astro-font-inter,
-    "Inter",
-    ui-sans-serif,
-    system-ui,
-    sans-serif
-  );
+  --font-inter: var(--astro-font-inter);
   --font-sans: var(--font-inter);
 }
 
