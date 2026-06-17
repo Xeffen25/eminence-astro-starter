@@ -93,7 +93,12 @@ The template includes:
 Create your project from this template with:
 
 ```sh
-pnpm create astro@latest --template Xeffen25/eminence-astro-starter --install
+pnpm create astro@latest --template Xeffen25/eminence-astro-starter --install --no-git
+```
+
+Move your terminal into the created directory and start it with the following command:
+
+```sh
 git init
 pnpm husky
 git add .
@@ -121,7 +126,7 @@ git push -u origin main
 Update the project name in these files and remove files you do not need:
 
 - `wrangler.jsonc` (`name` and `route` if needed; otherwise delete `route` and set `workers_dev` to `true`)
-- `package.json` (`name`)
+- `astro.config.mjs` (`site`)
 - LICENSE
 - CONTRIBUTING.md
 - README.md
