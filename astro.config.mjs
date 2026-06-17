@@ -19,8 +19,7 @@ export default defineConfig({
       provider: fontProviders.google(),
       name: "Inter",
       cssVariable: "--astro-font-inter",
-      // Inter on Google Fonts supports the full range from 100 to 900.
-      weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      weights: ["100 900"],
       styles: ["normal", "italic"],
     },
   ],
