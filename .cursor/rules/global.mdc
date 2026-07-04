@@ -1,3 +1,9 @@
+---
+description: project-wide agent instructions
+globs: **/*
+alwaysApply: true
+---
+
 Astro site built around Cloudflare Workers hosting, with SEO and i18n support. `main` is live production — every merge auto-deploys, treat changes as shipping to real users.
 
 ## Tech Stack

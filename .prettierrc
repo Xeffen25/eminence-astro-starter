@@ -22,6 +22,12 @@
       "options": {
         "parser": "svelte"
       }
+    },
+    {
+      "files": "*.mdc",
+      "options": {
+        "parser": "markdown"
+      }
     }
   ]
 }
