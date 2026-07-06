@@ -1,6 +1,7 @@
 ---
 name: daisyui-config
 description: Configuration options for daisyUI 5
+disable-model-invocation: true
 ---
 
 ## Config

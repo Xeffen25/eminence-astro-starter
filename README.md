@@ -99,16 +99,63 @@ The template includes:
 - [TypeScript Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/TypeScript-Config)
 - [Wrangler Config](https://github.com/Xeffen25/eminence-astro-starter/wiki/Wrangler-Config)
 - [Better commands for easier DX](https://github.com/Xeffen25/eminence-astro-starter/wiki/Better-Commands)
-- [AI ready](https://github.com/Xeffen25/eminence-astro-starter/wiki/AI-Ready)
+- [AI ready](#ai-ready) (see below)
 - [GitHub labels for websites](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Labels-for-Websites)
 - [GitHub related files](https://github.com/Xeffen25/eminence-astro-starter/wiki/GitHub-Related-Files)
 - [VS Code settings](https://github.com/Xeffen25/eminence-astro-starter/wiki/VS-Code-Settings)
 - [Vitest for testing](https://github.com/Xeffen25/eminence-astro-starter/wiki/Vitest-for-Testing)
 
+## AI ready
+
+This project includes **skills** — short instruction files that teach AI assistants how to work on _this_ codebase. They live in `.agents/skills/`. Skills are **opt-in**: they load only when you ask for them, so normal chats stay light.
+
+Works with **Cursor**, **GitHub Copilot**, **Codex**, and **Claude Code**. More detail: [`.agents/EXPERTS.md`](.agents/EXPERTS.md).
+
+### How to use a skill
+
+**In Cursor:** type `@` and pick the skill name (for example `@honest-seo-expert`), or attach the `SKILL.md` file to your message.
+
+**In other tools:** tell the assistant to read the skill file, for example: “Follow `.agents/skills/honest-seo-expert/SKILL.md`”.
+
+Then describe what you want:
+
+```text
+@performance-expert — The homepage feels slow. Fix it.
+
+@honest-seo-expert — Add metadata and JSON-LD for the about page.
+```
+
+**Experts fix code by default.** Add **audit only** if you want a report without changes.
+
+### Library skills
+
+Reference docs for tools already in this template.
+
+| Skill                  | What it does                                       |
+| ---------------------- | -------------------------------------------------- |
+| `daisyui`              | Correct daisyUI 5 classes, themes, and components  |
+| `eminence-astro-suite` | Head tags, SEO config, favicons, manifest, sitemap |
+
+### Expert skills
+
+Specialists that diagnose problems and implement fixes.
+
+| Skill                  | What it does                                        |
+| ---------------------- | --------------------------------------------------- |
+| `performance-expert`   | Speed, Core Web Vitals, images, fonts, bundles      |
+| `honest-seo-expert`    | Honest SEO, metadata, structured data, alt text     |
+| `security-expert`      | Vulnerabilities, secrets, server actions, Workers   |
+| `accessibility-expert` | Keyboard access, contrast, screen readers (WCAG AA) |
+| `ux-expert`            | Forms, navigation, clarity, mobile usability        |
+| `conversion-designer`  | Layout, CTAs, and visuals aimed at your page goal   |
+
 ## Project Structure
 
 ```text
 /
+├── .agents/
+│   ├── EXPERTS.md                 # How to use skills (all AI tools)
+│   └── skills/                    # Opt-in AI instruction files
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   ├── instructions/

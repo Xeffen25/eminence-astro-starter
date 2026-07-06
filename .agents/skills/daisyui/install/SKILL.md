@@ -1,6 +1,7 @@
 ---
 name: daisyui-install
 description: Installation notes for daisyUI 5
+disable-model-invocation: true
 ---
 
 ## daisyUI 5 install notes

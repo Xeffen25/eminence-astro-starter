@@ -5,9 +5,9 @@ Astro site built around Cloudflare Workers hosting, with SEO and i18n support. `
 Framework: Astro 7, SSR (`output: "server"`)
 Hosting: Cloudflare Workers via `@astrojs/cloudflare` + `wrangler` 4
 UI: Svelte 5 (`@astrojs/svelte`)
-Styling: Tailwind CSS 4 + daisyUI 5 — `daisyui` skill installed, consult it before writing component classes
+Styling: Tailwind CSS 4 + daisyUI 5 — opt-in skill at `.agents/skills/daisyui/SKILL.md` (`@daisyui` or attach when writing component classes)
 i18n: Paraglide JS 2 (`@inlang/paraglide-js`)
-SEO / Head: `eminence-astro-suite` — its skill installed, consult it before hand-writing head/metadata
+SEO / Head: `eminence-astro-suite` — opt-in skill at `.agents/skills/eminence-astro-suite/SKILL.md` (`@eminence-astro-suite` or attach for head/metadata work)
 Sitemap: `@astrojs/sitemap` 3.7+ (older 3.0 lacks options this project relies on)
 JSON-LD: `schema-dts`
 Language: TypeScript 6, strict mode (`astro/tsconfigs/strict`)
@@ -99,3 +99,23 @@ Supported types: `feat` new feature or improvement, `fix` bug fix, `docs` docume
 Exception: if a change doesn't fit any type, skip the `type(scope):` prefix and write a concise plain description instead, never exceeding 70 characters.
 
 Always run `pnpm format` before committing (Husky + lint-staged enforce this automatically on staged files).
+
+## Library skills (opt-in)
+
+| Skill                | Path                                           | Purpose                                             |
+| -------------------- | ---------------------------------------------- | --------------------------------------------------- |
+| daisyui              | `.agents/skills/daisyui/SKILL.md`              | daisyUI 5 component classes, themes, colors         |
+| eminence-astro-suite | `.agents/skills/eminence-astro-suite/SKILL.md` | Head metadata, integration config, SEO output files |
+
+## Experts
+
+When the user asks for performance, SEO, security, accessibility, UX, or conversion design help, read and follow the matching skill in `.agents/skills/`. Default: implement fixes. **Audit only** = report without code changes. Full guide: `.agents/EXPERTS.md`.
+
+| Skill                | Path                                           | Purpose                                                   |
+| -------------------- | ---------------------------------------------- | --------------------------------------------------------- |
+| performance-expert   | `.agents/skills/performance-expert/SKILL.md`   | Core Web Vitals, bundles, images, fonts, hydration        |
+| honest-seo-expert    | `.agents/skills/honest-seo-expert/SKILL.md`    | Integrity-first SEO via eminence-astro-suite + schema-dts |
+| security-expert      | `.agents/skills/security-expert/SKILL.md`      | OWASP, SSR/actions, secrets, Workers bindings             |
+| accessibility-expert | `.agents/skills/accessibility-expert/SKILL.md` | WCAG 2.2 AA, semantics, keyboard, contrast                |
+| ux-expert            | `.agents/skills/ux-expert/SKILL.md`            | Flows, forms, navigation, clarity                         |
+| conversion-designer  | `.agents/skills/conversion-designer/SKILL.md`  | Goal-driven layout, CTAs, visual design                   |

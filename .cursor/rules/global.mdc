@@ -11,9 +11,9 @@ Astro site built around Cloudflare Workers hosting, with SEO and i18n support. `
 Framework: Astro 7, SSR (`output: "server"`)
 Hosting: Cloudflare Workers via `@astrojs/cloudflare` + `wrangler` 4
 UI: Svelte 5 (`@astrojs/svelte`)
-Styling: Tailwind CSS 4 + daisyUI 5 — `daisyui` skill installed, consult it before writing component classes
+Styling: Tailwind CSS 4 + daisyUI 5 — opt-in skill at `.agents/skills/daisyui/SKILL.md` (`@daisyui` or attach when writing component classes)
 i18n: Paraglide JS 2 (`@inlang/paraglide-js`)
-SEO / Head: `eminence-astro-suite` — its skill installed, consult it before hand-writing head/metadata
+SEO / Head: `eminence-astro-suite` — opt-in skill at `.agents/skills/eminence-astro-suite/SKILL.md` (`@eminence-astro-suite` or attach for head/metadata work)
 Sitemap: `@astrojs/sitemap` 3.7+ (older 3.0 lacks options this project relies on)
 JSON-LD: `schema-dts`
 Language: TypeScript 6, strict mode (`astro/tsconfigs/strict`)

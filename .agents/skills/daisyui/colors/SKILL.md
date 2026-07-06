@@ -1,6 +1,7 @@
 ---
 name: daisyui-colors
 description: MANDATORY color usage rules for daisyUI 5
+disable-model-invocation: true
 ---
 
 ## daisyUI 5 colors

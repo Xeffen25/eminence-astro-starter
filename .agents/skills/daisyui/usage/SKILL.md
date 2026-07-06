@@ -1,6 +1,7 @@
 ---
 name: daisyui-usage
 description: MANDATORY usage rules for daisyUI 5
+disable-model-invocation: true
 ---
 
 ## daisyUI 5 usage rules
