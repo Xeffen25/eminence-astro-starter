@@ -5,16 +5,17 @@ on:
   push:
     paths:
       - .github/labels.json
+      - .github/workflows/sync-labels.yml
 
 permissions:
   issues: write
+  contents: read
 
 jobs:
   labels:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           sparse-checkout: .github/labels.json
 
