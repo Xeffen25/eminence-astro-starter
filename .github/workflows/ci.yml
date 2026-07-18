@@ -31,6 +31,9 @@ jobs:
       - name: Format check
         run: pnpm format:check
 
+      - name: Generate Cloudflare types
+        run: pnpm cf-typegen
+
       - name: Astro check
         run: pnpm astro check
 
