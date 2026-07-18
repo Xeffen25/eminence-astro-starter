@@ -6,8 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "wrangler types && concurrently \"pnpm paraglide:watch\" \"astro dev\"",
-    "build": "pnpm paraglide && astro build",
+    "dev": "wrangler types && astro dev",
+    "build": "astro build",
     "preview": "pnpm build && astro preview",
     "astro": "astro",
     "generate-types": "wrangler types",
@@ -19,8 +19,6 @@
     "test:watch": "vitest watch",
     "github:ci": "pnpm format:check && astro check && pnpm test",
     "all": "pnpm format && pnpm cf-typegen && astro check && pnpm test && pnpm build",
-    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide",
-    "paraglide:watch": "pnpm paraglide --watch",
     "machine-translate": "inlang machine translate --project project.inlang"
   },
   "lint-staged": {
@@ -43,7 +41,6 @@
     "@inlang/cli": "^3.1.14",
     "@inlang/paraglide-js": "^2.20.2",
     "@types/node": "^26.1.0",
-    "concurrently": "^10.0.3",
     "daisyui": "^5.6.10",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",

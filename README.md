@@ -213,21 +213,19 @@ Specialists that diagnose problems and implement fixes.
 
 All commands are run from the project root.
 
-| Command                  | Action                                                            |
-| :----------------------- | :---------------------------------------------------------------- |
-| `pnpm dev`               | Generate Wrangler types, run Paraglide watch, and start Astro dev |
-| `pnpm build`             | Compile Paraglide messages, then build the site                   |
-| `pnpm preview`           | Build and preview the production build locally                    |
-| `pnpm astro`             | Run Astro CLI directly                                            |
-| `pnpm generate-types`    | Generate Wrangler types                                           |
-| `pnpm cf-typegen`        | Generate Wrangler types (alias)                                   |
-| `pnpm deploy`            | Build and deploy with Wrangler                                    |
-| `pnpm format`            | Format the whole codebase with Prettier                           |
-| `pnpm format:check`      | Check formatting without changing files                           |
-| `pnpm test`              | Run Vitest once                                                   |
-| `pnpm test:watch`        | Run Vitest in watch mode                                          |
-| `pnpm github:ci`         | Run formatting check, Astro check, and tests                      |
-| `pnpm all`               | Run format, type generation, Astro check, tests, and build        |
-| `pnpm paraglide`         | Compile Paraglide messages to `src/paraglide`                     |
-| `pnpm paraglide:watch`   | Watch and recompile Paraglide messages                            |
-| `pnpm machine-translate` | Run Inlang machine translation                                    |
+| Command                  | Action                                                     |
+| :----------------------- | :--------------------------------------------------------- |
+| `pnpm dev`               | Generate Wrangler types, then start Astro dev              |
+| `pnpm build`             | Build the site (Paraglide compiles via the Vite plugin)    |
+| `pnpm preview`           | Build and preview the production build locally             |
+| `pnpm astro`             | Run Astro CLI directly                                     |
+| `pnpm generate-types`    | Generate Wrangler types                                    |
+| `pnpm cf-typegen`        | Generate Wrangler types (alias)                            |
+| `pnpm deploy`            | Build and deploy with Wrangler                             |
+| `pnpm format`            | Format the whole codebase with Prettier                    |
+| `pnpm format:check`      | Check formatting without changing files                    |
+| `pnpm test`              | Run Vitest once                                            |
+| `pnpm test:watch`        | Run Vitest in watch mode                                   |
+| `pnpm github:ci`         | Run formatting check, Astro check, and tests               |
+| `pnpm all`               | Run format, type generation, Astro check, tests, and build |
+| `pnpm machine-translate` | Run Inlang machine translation                             |
